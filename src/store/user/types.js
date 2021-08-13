@@ -1,0 +1,7 @@
+export const INCREMENT_COUNT = 'INCREMENT_COUNT';
+export const DECREMENT_COUNT = 'DECREMENT_COUNT';
+export const GET_USER_SUCCESS = 'GET_USER_SUCCESS';
+export const GET_USER_ERROR = 'GET_USER_ERROR';
+export const GET_USER_REQUEST = 'GET_USER_REQUEST';
+export const MODULE_NAME = 'USER';
+export const SUCCESS = 'SUCCESS';
