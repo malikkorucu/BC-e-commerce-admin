@@ -1,7 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, BreadcrumbItem } from 'reactstrap';

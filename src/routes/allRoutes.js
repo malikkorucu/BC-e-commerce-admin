@@ -4,12 +4,18 @@
 // import Logout from 'pages/Authentication/Logout';
 // Dashboard
 import { Dashboard } from '../pages';
+import { ProductList } from '../pages/ProductManagement/ProductList';
 
 const oysRoutes = [
   { path: '/', component: Dashboard, title: 'Ana Sayfa' },
   {
     path: '/uyelik-yonetimi',
     title: 'Üyelik Yönetimi',
+  },
+  {
+    path: '/urun-yonetimi/urun-listesi',
+    title: 'Ürün Yönetimi',
+    component: ProductList,
   },
 ];
 

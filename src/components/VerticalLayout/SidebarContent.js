@@ -1,7 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/role-supports-aria-props */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
 import React, { useEffect } from 'react';
 // MetisMenu
 import MetisMenu from 'metismenujs';
@@ -88,6 +84,19 @@ const SidebarContent = props => {
               <li>
                 <Link to="/kullanici-yonetimi/kullanicilar" className="mock">
                   Kullanıcılar
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link to="/#" className="has-arrow waves-effect mock">
+              <i className="bx bxs-user-detail" />
+              <span>Ürün Yönetimi</span>
+            </Link>
+            <ul className="sub-menu" aria-expanded="false">
+              <li>
+                <Link to="/urun-yonetimi/urun-listesi" className="mock">
+                  Ürün Listesi
                 </Link>
               </li>
             </ul>

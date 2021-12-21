@@ -17,7 +17,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
     "devextreme": "20.2.5",
@@ -41,52 +41,16 @@
     "web-vitals": "^1.1.2"
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-config-standard-react": "^9.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.20.6",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "eslint-auto-fix": "^1.0.3",
-    "eslint-plugin-css-modules": "^2.11.0",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "stylelint"
-    ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "env": {
-      "browser": true,
-      "es6": true
-    },
-    "globals": {
-      "$": true
-    },
-    "settings": {
-      "react": {
-        "version": "^17.0.1"
-      }
-    },
-    "rules": {
-      "semi": [
-        "error",
-        "never"
-      ]
+  "settings": {
+    "react": {
+      "version": "^17.0.1"
     }
   },
   "browserslist": {
@@ -99,18 +63,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "lint-staged": {
-    "./src/*.{js,jsx}": [
-      "npx prettier --write",
-      "eslint --no-ignore --fix"
-    ],
-    "./src/*.{json,md}": [
-      "prettier --write"
-    ],
-    "./src/*.{css,scss}": [
-      "stylelint --fix"
     ]
   }
 }
