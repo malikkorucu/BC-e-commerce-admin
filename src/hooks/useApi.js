@@ -8,12 +8,13 @@ export const useApi = (apiFunc) => {
   const request = async (...args) => {
     setLoading(true);
     const response = await apiFunc(...args);
-    setError(!response.isSuccess);
-    if (!response.isSuccess) {
+    setError(!response.data.success || !response.data.status);
+    if (!response.data.success) {
       // console.info(response.data.data);
-      console.log(response)
+    }else{
+
     }
-     setData(response.data.data ? response.data.data : response.data);
+    setData(response.data.data ? response.data.data : response.data);
     setTimeout(() => {
       setLoading(false);
     }, 2000);

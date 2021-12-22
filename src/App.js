@@ -1,42 +1,46 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 // Import Routes all
-import trMessages from 'devextreme/localization/messages/tr.json';
-import { locale, loadMessages } from 'devextreme/localization';
-import { oysRoutes, authRoutes } from './routes/allRoutes';
+import trMessages from "devextreme/localization/messages/tr.json";
+import { locale, loadMessages } from "devextreme/localization";
+import { oysRoutes, authRoutes } from "./routes/allRoutes";
 
 // Import all middleware
-import Authmiddleware from './routes/middleware/Authmiddleware';
+import Authmiddleware from "./routes/middleware/Authmiddleware";
 
 // layouts Format
-import VerticalLayout from './components/VerticalLayout';
-import NonAuthLayout from './components/NonAuthLayout';
+import VerticalLayout from "./components/VerticalLayout";
+import NonAuthLayout from "./components/NonAuthLayout";
 
 // 404
-import { ErrorPage } from './pages';
+import { ErrorPage } from "./pages";
 
 // Import scss
-import './assets/scss/theme.scss';
+import "./assets/scss/theme.scss";
 
 // devExpress
-import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.light.css';
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.light.css";
 
 // Import toastr
-import 'toastr/build/toastr.min.css';
+import "toastr/build/toastr.min.css";
+import { Alert } from "./components/Common/Alert";
+import { useRef } from "react";
+import { ToastContainer } from "./components/Common/ToastContainer";
 
 const App = () => {
+  const provider = useRef();
   useEffect(() => {
     loadMessages(trMessages);
-    locale('tr');
+    locale("tr");
   }, []);
 
   return (
-    <>
+    <div>
       <Router basename="/">
         <Switch>
           {authRoutes.map((route, idx) => (
@@ -48,7 +52,6 @@ const App = () => {
               isAuthProtected={false}
             />
           ))}
-
           {oysRoutes.map((route, idx) => (
             <Authmiddleware
               path={route.path}
@@ -63,7 +66,9 @@ const App = () => {
           <Route path="*">{ErrorPage}</Route>
         </Switch>
       </Router>
-    </>
+
+     
+    </div>
   );
 };
 

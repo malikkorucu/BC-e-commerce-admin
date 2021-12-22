@@ -21,7 +21,7 @@ export const DataTable = (props) => {
   const [tableData, setTableData] = React.useState([]);
 
   useEffect(() => {
-    const newData = data.map((product) => ({ ID: product._id, ...product }));
+    const newData = data?.map((product) => ({ ID: product._id, ...product }));
     setTableData(newData);
   }, []);
 
