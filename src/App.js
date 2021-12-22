@@ -28,9 +28,7 @@ import "devextreme/dist/css/dx.light.css";
 
 // Import toastr
 import "toastr/build/toastr.min.css";
-import { Alert } from "./components/Common/Alert";
 import { useRef } from "react";
-import { ToastContainer } from "./components/Common/ToastContainer";
 
 const App = () => {
   const provider = useRef();
@@ -67,7 +65,7 @@ const App = () => {
         </Switch>
       </Router>
 
-     
+
     </div>
   );
 };

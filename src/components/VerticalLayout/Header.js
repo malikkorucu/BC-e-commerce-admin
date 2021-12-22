@@ -26,10 +26,10 @@ const Header = () => {
             <div className="navbar-brand-box">
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logoLightSvg} alt="" height="22" />
+                LOGO
                 </span>
                 <span className="logo-lg">
-                  <img src={logoLightPng} alt="" height="35" />
+                  LOGO
                 </span>
               </Link>
             </div>
